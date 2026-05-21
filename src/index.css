@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme{
+    --font-pricedown:'Pricedown Bl',sans-serif
+}
+
+.special-text{
+    /* font-family: pricedown; */
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    font-size: 6cm;
+    background-image: url('/images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "pricedown";
+  src: url("/images/pricedown.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme{
-    --font-pricedown:'Pricedown Bl',sans-serif
+    --font-pricedown:'pricedown',sans-serif;
 }
 
 .special-text{
-    /* font-family: pricedown; */
+    font-family: pricedown;
     position: absolute;
     left: 45%;
     top: 30%;

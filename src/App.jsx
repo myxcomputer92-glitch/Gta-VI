@@ -11,23 +11,32 @@ function App() {
 
   useGSAP(()=>{
     const tl=gsap.timeline()
-    const mm=gsap.matchMedia()
+    const mm=gsap.matchMedia()    
     mm.add('(min-width:1281px)',()=>{
-
+      
       tl.to('.special-text',{
         scale:3,
         duration:1,
         opacity:1,
       })
+
+tl.add('sad')
+
       tl.to('.special-text',{
         display:'none',
         duration:0.1,
       })
-      
+
+      tl.to('.container, .cont-2',{
+      opacity:1,
+      duration:1,
+    },'sad')
+    
+
       tl.to('.big-img , .sky-img',{
         opacity:1,
         duration:1,
-      })
+      },'sad')
       
     })
     mm.add('(min-width:1025px) and (max-width:1280px)',()=>{
@@ -37,15 +46,22 @@ function App() {
         duration:1,
         opacity:1,
       })
+      tl.add('sad')
       tl.to('.special-text',{
         display:'none',
         duration:0.1,
       })
       
+      tl.to('.container, .cont-2',{
+      opacity:1,
+      duration:1,
+    },'sad')
+    
+
       tl.to('.big-img , .sky-img',{
         opacity:1,
         duration:1,
-      })
+      },'sad')
       
     })
 
@@ -56,15 +72,23 @@ function App() {
         duration:1,
         opacity:1,
       })
+tl.add('sad')
+
       tl.to('.special-text',{
         display:'none',
         duration:0.1,
       })
       
+ tl.to('.container, .cont-2',{
+      opacity:1,
+      duration:1,
+    },'sad')
+    
+
       tl.to('.big-img , .sky-img',{
         opacity:1,
         duration:1,
-      })
+      },'sad')
       
     })
     mm.add('(min-width:481px) and (max-width:768px)',()=>{
@@ -75,15 +99,22 @@ function App() {
         opacity:1,
         x:'-15vw'
       })
+      tl.add('sad')
       tl.to('.special-text',{
         display:'none',
         duration:0.1,
       })
       
+       tl.to('.container, .cont-2',{
+      opacity:1,
+      duration:1,
+    },'sad')
+    
+
       tl.to('.big-img , .sky-img',{
         opacity:1,
         duration:1,
-      })
+      },'sad')
       
     })
     mm.add('(max-width:480px)',()=>{
@@ -94,15 +125,23 @@ function App() {
         opacity:1,
         x:'-20vw'
       })
+
+      tl.add('sad')
+      
       tl.to('.special-text',{
         display:'none',
         duration:0.1,
       })
-      
+
+       tl.to('.container, .cont-2',{
+      opacity:1,
+      duration:1,
+    },'sad')
+    
       tl.to('.big-img , .sky-img',{
         opacity:1,
         duration:1,
-      })
+      },'sad')
       
     })
 tl.to('.cont-3',{
@@ -114,12 +153,10 @@ tl.to('.cont-3',{
   return (
     <>
     <h1 className='special-text font-pricedown opacity-0'>VI</h1>
-    <div className="sky-img bg-[url('/images/sky.png')] object-cover opacity-0">
-    <div className="big-img bg-[url('/images/bg.png')] object-cover overflow-hidden opacity-0">
+    <div className="sky-img bg-[url('/images/sky.png')] object-cover w-full h-screen absolute top-0 z-10 scale-110 opacity-0"></div>
+    <div className="big-img bg-[url('/images/bg.png')] object-cover w-full h-screen absolute top-0 z-10 scale-110 overflow-hidden opacity-0"></div>
 <Navbar/>
 <Hero/>
-    </div>
-    </div>
 <About/>
     </>
   )
